@@ -1,0 +1,5 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %} 
+{% block title %}Hola Mundo{% endblock %}
+{% block welcome-msg %} {% trans 'Bienvenido mario,' %} {% firstof user.get_short_name user.get_username %}. {% endblock %} 
+

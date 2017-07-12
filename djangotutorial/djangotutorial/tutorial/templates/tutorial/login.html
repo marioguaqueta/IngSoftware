@@ -1,0 +1,35 @@
+  {% load crispy_forms_tags %}
+  {% load static %}
+  <html>
+  <head>
+  	<title>Registro de datos</title>
+  	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+  	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  	<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <center>
+  	<div class="header">
+  		<div class="headerleft">
+  			<h1>Ingresar</h1>
+  		</div>
+  	</div>
+  	<h1>Formulario de ingreso</h1>
+  	<div class="container">
+    <center>
+  		<div>
+  			<form action="" method="POST">
+  				{% csrf_token %}
+  				{% crispy loginuser %}
+  				{{ loginuser.errors }}
+				  {{ loginuser.non_field_errors }}
+  				<input type="submit" value="Ingresar" >
+  			</form>
+  		</div>
+      </center>
+  	</div>
+</center>
+  </body>
+  </html>
+
